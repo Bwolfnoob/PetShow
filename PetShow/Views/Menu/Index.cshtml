@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    body {
+        font-family: Century;
+        /*  background: rgb(51,51,51);*/
+        color: #fff;
+        padding: 20px;
+        /*  background-image: url('../../Images/bg2.png');*/
+        background-color: #dcdcdc;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .pagina {
+        width: 100%;
+        overflow-x: auto;
+        height: 600px;
+        margin-top: 150px;
+    }
+
+    .linha {
+        width: auto;
+        padding: 5px;
+        height: 110px;
+        display: table;
+    }
+
+    .tile {
+        height: 100px;
+        width: 100px;
+        float: left;
+        margin: 5px;
+        padding: 2px;
+        cursor: pointer;
+    }
+
+        .tile:hover {
+            background-color: #b2aaaa;
+        }
+
+    .tileLargo {
+        width: 210px;
+        height: 130px;
+    }
+
+    .amarelo {
+        /* background: #DAA520;*/
+        border: 3px solid #DAA520;
+    }
+
+    .vermelho {
+        background: #CD0000;
+    }
+
+    .azul {
+        background: #4682B4;
+    }
+
+    .verde {
+        background-color: #2E8B57;
+    }
+
+    .tile img {
+        width: 90px;
+        margin: 5px 0px 0px 55px;
+    }
+
+    .tile div {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        margin-top: 5px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+</style>
+
+
+<div class="pagina">
+    <div class="linha">
+        <div class="tile tileLargo">
+            <img src="/Images/Cidade.png" alt="Cidade" width=100 heigth=100 />          
+            <p align="left">
+        </div>
+
+        <div class="tile tileLargo">
+            <img src="~/Images/raca.png" alt="Cidade" width=100 heigth=100 />
+            <p align="left">
+        </div>
+        <div class="tile tileLargo">
+            <img src="~/Images/usuario.png" alt="Cidade" width=100 heigth=100 />
+            <p align="left">
+        </div>
+        <div class="tile tileLargo">
+            <img src="~/Images/adotante.png" alt="Cidade" width=100 heigth=100 />
+            <p align="left">
+        </div>
+    </div>
+    <div class="linha">
+
+        <div class="tile tileLargo">
+            <img src="~/Images/animal.png" alt="Cidade" width=100 heigth=100 />
+            <p align="left">
+        </div>
+
+        <div class="tile tileLargo">
+            <img src="~/Images/adocao.png" alt="Cidade" width=100 heigth=100 />
+            <p align="left">
+        </div>
+        <div class="tile tileLargo">
+            <img src="~/Images/portal.png" alt="Cidade" width=100 heigth=100 />
+            <p align="left">
+        </div>
+        <div class="tile tileLargo">
+            <img src="~/Images/relatorio.png" alt="Cidade" width=100 heigth=100 />
+            <p align="left">
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script>
+
+    $('.tile').click(function () {
+        alert("Você precisa estar logado.");
+        var url = $(this).attr('data-action');
+        window.location.href = "/home";
+    });
+  
+</script>
+
